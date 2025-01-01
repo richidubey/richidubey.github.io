@@ -2,6 +2,9 @@
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JX1VE85ZNC"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -12,76 +15,185 @@
 
     <title>Richi Dubey</title>
     <style>
-        a{
-            color: #7d5fff;
-            text-decoration: none;
-        }
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
 
-        .links-outreach-publications{
-            margin-top: .5em; 
-            text-align: center;
-        }
+.intro a:focus,
+.intro a:hover {
+  text-decoration: underline;
+}
+
+
+.links-outreach-publications{
+    margin-top: .5em; 
+    text-align: center;
+}
     </style>
 
+<style>
+    .top-header {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        min-width: 600px;
+        margin: auto;
+    }
+
+    .name&navbar {
+        display: flex;
+        flex-direction: column; /* Stack name and navbar vertically */
+        align-items: flex-start; /* Align content to the start */
+        margin-left: 1em; /* Move the name closer to the image */
+        
+    }
+
+    .photo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        padding-right: 2em;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: start;
+      gap: 1.5em; /* Add spacing between navbar items */
+      font-family: "Borel", serif;
+      font-weight: 400; /* You can try 300 for an even lighter look */
+      margin-top: 0.5em; /* Add slight spacing between the name and navbar */
+      /* padding-left: 2em; */
+    }
+
+    .photo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        /* style="float: left; margin-right: 2em; width: 200px; height: 200px; justify-content: center;   align-items: center;    display: flex;" */
+    }
+    .socials {
+      display: flex;
+      width: 50%;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 0 auto;
+      
+    }
+    /* LINKS */
+    .nav-item {
+      text-decoration: none;
+      color: #333;
+      font-weight: 400;
+      font-size: 1rem;
+      cursor: pointer;           /* changes mouse pointer on hover */
+      position: relative;
+      padding: 0.25rem 0;        /* slight vertical padding for the underline effect */
+      transition: color 0.2s ease;
+    }
+
+    /* HOVER EFFECT */
+    .nav-item::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background-color: currentColor; /* use the text color for the underline */
+      transition: width 0.2s ease;
+    }
+    .nav-item:hover {
+      color: #007bff;           /* optional color change on hover */
+    }
+    .nav-item:hover::after {
+      width: 100%;              /* animate underline to full width on hover */
+    }
+    .nav-item.active {
+      color: #007bff;
+    }
+    .nav-item.active::after {
+      width: 100%;  /* underline the current page from the start */
+    }
+  </style>
+  
+
     <!---------------------------- Start: Code for icon for the portfolio website (Shown in tab bar) ----------------------------->
-    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" type="image/jpg" href="icons/icon_richi.jpg">
     <!------------------------- End: Code for icon for the portfolio website (Shown in tab bar) ------------------------------------>
 
 
 </head>
 <body >
 
-    <div style="width: 50%; min-width: 600px; overflow: hidden; margin: auto;">
+    <div  style="width: 50%; min-width: 600px; overflow: hidden; margin: auto;">
 
-        <div>
-            <h1 style="text-align: center;">Richi Dubey</h1>
+        <!-- ///////////////////// -->
+
+
+        <div class="top-header">
+            <div class="photo-container">
+                <img src="./images/photo_richidubey.png" width="100%" style="border-radius: 20%" >
+            </div>
+            <div class="name&navbar">
+                <div>
+                    <h1>Richi Dubey</h1>
+                </div>
+
+                <div class="navbar">
+                    <a href="#" class="nav-item">Home</a>
+                    <a href="#publications" class="nav-item">Publications</a>
+                    <a href="#projects" class="nav-item">Projects</a>
+                    <a href="#blog" class="nav-item">Blog</a>
+                    <a href="#misc" class="nav-item">Misc</a>
+                </div>  
+            </div>
         </div>
+        
+
+        <!-- NAVIGATION BAR -->
+
     
 
         <!-- Start: Top Section: Introduction  -->
-        <div style="margin-top: 2em;">
+        <div class = "intro" style="margin-top: 2em;">
+            <div style="font-size: medium; height: 250px; display: table-cell; vertical-align: middle;">
+                I am a masters candidate in Computer Science at Georgia Tech specializing in Machine Learning and Computing Systems. 
+                I completed my undergraduate degree at  <a href="https://www.bits-pilani.ac.in/" target="_blank">BITS Pilani</a>
+                majoring in Computer Science and was the receipent of the <b>Hercules</b> Award and the <b>SURE</b> Award.  
 
-            <div style="float: left; margin-right: 2em; width: 250px; height: 250px; justify-content: center;   align-items: center;    display: flex;">
-                <img src="./images/photo_richidubey.png" width="100%" style="border-radius: 10% 10% 0 0;" >
+                <br><br>
+                
+                I worked as an open-source developer on a project to <a href="https://rtemswithrichi.wordpress.com/strong-apa-scheduler/" target="_blank">implement a real-time scheduler</a>
+                 as part of <b>Google Summer of Code '21</b> program. Previously, I spent time at <a href="https://home.cern/" target="_blank">CERN</a> creating drivers for radioactive sensors 
+                 and at <a href="https://www.oracle.com/cloud/" target="_blank">Oracle</a> buidling scalable cloud products.
+                <br><br>
+                I love creating <a href="https://www.youtube.com/watch?v=YEVrvoBImZ0" target="_blank">music</a> and art in my free time.
+                <br><br>
+                Feel free to checkout my <a href="./CV/CV_RichiDubey.pdf" target="_blank">CV</a> or send me an <a href="mailto: richidubey@gmail.com">email</a>.
+                <br><br>
+                
             </div>
-            <div style="font-size: large; height: 250px; display: table-cell; vertical-align: middle;">
-                Hi, I am currently a Fellow at CERN. 
-                <br><br>
-                I graduated from <a href="https://www.bits-pilani.ac.in/">BITS Pilani</a> and did my bachelor thesis from <a href="https://hipert.unimore.it/">HiPeRT Lab</a><br> <br>
-                I have worked on <a href="https://www.rtems.org/" target="_blank">RTEMS</a> as part of <a href="https://summerofcode.withgoogle.com/" target="_blank">GSoC </a> 2020 and at Oracle
-                in the <a href="https://www.oracle.com/integration/process-automation/" target="_blank">Oracle Process Automation</a> team as a backend engineer for an year before joining CERN.
-                <br><br>
 
-                If you're curious about the details of all the stuff I've been working on, just check out my CV below. It's got the full scoop! 
-
-                <br><br>
-                I can be reached at <a href="mailto: richidubey@gmail.com">richidubey@gmail.com</a>
-            </div>
-            
+            <div class="socials">
+                <a href="mailto: richidubey@gmail.com" target="_blank">[ Email</a>
+                <a href="./CV/CV_RichiDubey.pdf" target="_blank">Resume</a>
+                <a href="https://github.com/richidubey" target="_blank">Github</a>
+                <a href="https://www.linkedin.com/in/richidubey/" target="_blank">Linkedin ]</a>
+              </div>
         </div>
-        <!-- End: Top Section: Introduction  -->
+  
 
-
-
+        
+      <!-- End: Top Section: Introduction  -->
         <!-- Start: Section: Publications  -->
-        <div style="margin-top: 2em; clear: left;">
+        <div style="margin-top: 2em; clear: left;" id="publications">
             <h2>Publications</h2>
 
             <div>
@@ -110,32 +222,45 @@
                 </div>
             </div>
 
-            <!-- TODO: Remove this section if no more publications, or copy paste the div for adding more publications -->
-            <div style="clear: left; margin-top: 2em;">
-                <div style="float: left; margin-right: 2em; width: 250px; height: 150px;">
-                    <!-- TODO: Change the source to a pic of your publication  -->
-                    <img src="./images/2021_RichiDubey_Bachelor_Thesis.png" width="100%" style = "padding: 1px; border:1px solid #021a40; background-color: #ffcccc">
-                </div>
-                
-                <div style="margin-top: 1em">
-                        <!-- TODO: Change the below details to your publications  -->
-                        <span style="font-weight: bold; color: #000;">Next-Generation Embedded Development Tools and Technologies – Virtualisation and Automation</span>
-                        <br>
-                        <div style="margin-top: .5em;">
-                            <span> Bachelor Thesis at <a href="https://hipert.unimore.it/" target="_blank"> HiPeRT Lab</a>, UNIMORE, Italy</span>
-                        </div>
-                        <div>
-                            <span style="font-style:italic"> Supervised by <a href="https://algo.ing.unimo.it/people/marko/" target="_blank">Prof. Marko Bertogna</a></span>
-                        </div>
-                        <div class="links-outreach-publications">
-                            <a href="./publications/2021_RichiDubey_Bachelor_Thesis.pdf" target="_blank">[Paper]</a>
-                        </div>
-                </div>
-            </div>
+            
         </div>  
         <!-- End: Section: Publications  -->
-        
-        <div style="margin-top: 2em; clear: left;">
+     
+           
+      <!-- End: Top Section: Publications  -->
+        <!-- Start: Section: Projects  -->
+        <div style="margin-top: 2em; clear: left;" id="projects">
+            <h2>Projects</h2>
+
+            <div>
+                <div style="float: left; margin-right: 2em; width: 250px; height: 150px;">
+                    <!-- TODO: Change the source to a pic of your publication  -->
+                    <img src="./images/zoomedALUinGPT.png" width="100%" style = "padding: 1px; border:1px solid #021a40; background-color: #ffcccc">
+                </div>
+
+                <div style="margin-left: 2em;">
+                        <!-- TODO: Change the below details to your publications  -->
+                        <span style="font-weight: bold; color: #000;">Improving mathematical performance of LLMs by using ALU blocks</span>
+                        <div>
+                            <ul>
+                             <li> Modified GPT-2 architecture to embed an ALU (Arithmetic Logic Unit) inside the transformer blocks.</li>
+                             <li> Finetuned on custom dataset of mathematical operations to achieve less than 0.002 average error across operations. </li>
+                             <a href="https://github.com/richidubey/ALU4LLMs" target="_blank">[Code]</a>
+                            </ul>
+                            
+                           
+                           
+                        </div>
+    
+
+
+                </div>
+            </div>
+
+        </div>  
+        <!-- End: Section: Projects  -->
+     
+        <div style="margin-top: 2em; clear: left;" id="awards">
             <h2>Awards</h2> 
             <div style="font-size: large;">
 
@@ -150,7 +275,7 @@
             </div>
         </div>
 
-        <div style="margin-top: 2em; clear: left;">
+        <div style="margin-top: 2em; clear: left;" id="blog">
             <h2>Blog</h2> 
 
             <div style="font-size: large;">
@@ -175,14 +300,10 @@
             </div>
         </div>
 
-        <div style="margin-top: 2em; clear: left;">
-            <h2>Learn More</h2> 
+        <div style="margin-top: 2em; clear: left;" id="misc">
+            <h2>More</h2> 
 
             <div style="font-size: large;">
-
-                <span style="display: block"> 
-                    &#8226 My <b><a href="./CV/CV_RichiDubey_July2023.pdf" target="_blank">CV</a> </b>(Last Updated: July 2023)
-                </span>
 
                 <span style="display: block"> 
                     &#8226 <b><a href="./misc/" target="_blank">Misc</a></b>
